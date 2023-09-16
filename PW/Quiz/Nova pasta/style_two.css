@@ -1,0 +1,52 @@
+.question-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1.5rem;
+  gap: 10px;
+  border-radius: inherit;
+}
+
+.question-container .option {
+  cursor: pointer;
+  background: no-repeat center / contain;
+}
+
+.question-container .option:first-child {
+  background-image: url(images/Herobrine.png);
+}
+
+.question-container .option:nth-child(2) {
+  background-image: url(images/Whiter.png);
+}
+
+.question-container .option:nth-child(3) {
+  background-image: url(images/Warden.png);
+}
+
+.question-container .option:last-child {
+  background-image: url(images/Ender-dragon.png);
+}
+
+.question-container .option:hover {
+  border-color: var(--title);
+}
+
+.option .option-label {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+.option .option-label:hover,
+input[type="radio"]:checked ~ .option-label {
+  background: transparent;
+  border-color: var(--title);
+}
+
+.option .option-radio {
+  display: none;
+}

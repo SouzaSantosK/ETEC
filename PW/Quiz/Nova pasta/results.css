@@ -1,0 +1,56 @@
+h1 {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+table {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+thead {
+  background: var(--title);
+  height: 45px;
+}
+
+thead tr th {
+  width: 33%;
+}
+
+tbody tr td {
+  height: 35px;
+  border-right: 1px solid var(--title);
+  border-left: 1px solid var(--title);
+}
+
+tbody tr:last-child td {
+  border-bottom: 1px solid var(--title);
+}
+
+.summary-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  padding: 0 1.5rem;
+}
+
+.summary-container p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.summary-container p.success {
+  color: #1db954;
+}
+
+.summary-container p.mistakes {
+  color: #ee3124;
+}
+
+button {
+  height: 60px;
+}

@@ -1,0 +1,12 @@
+.question-container .option {
+  cursor: pointer;
+  background: no-repeat center / cover;
+}
+
+.question-container .option:first-child {
+  background-image: url(images/nether.webp);
+}
+
+.question-container .option:last-child {
+  background-image: url(images/overworld.webp);
+}

@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Roboto";
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+main {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top {
+  text-align: center;
+  padding: 0 50px;
+}
+
+.description {
+  color: #212121;
+}
+
+.user-basics {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.user-basics input {
+  width: 100%;
+}
+
+.input-style {
+  padding: 10px;
+  border: 2px solid #21212148;
+  border-radius: 5px;
+  color: black;
+  outline: none;
+  font-family: "Poppins";
+}
+
+.input-style:hover {
+  border-color: #212121;
+}
+
+/* Sistema Operacional */
+
+ul {
+  list-style: none;
+  display: grid;
+  text-align: center;
+  column-gap: 15px;
+}
+
+.os ul {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.os li,
+.monitor li {
+  display: flex;
+  flex-direction: column-reverse;
+  border: 2px solid transparent;
+  height: 100%;
+  padding: 5px 0;
+}
+
+li:hover {
+  border-color: black;
+}
+
+.monitor ul {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.processador {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+
+select {
+  width: 100%;
+}
+
+.especs {
+  display: flex;
+  flex-direction: column;
+}
+
+.especs div {
+  font-size: 18px;
+}
+
+button {
+  all: unset;
+  background: black;
+  color: white;
+  font-family: "Poppins";
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  color: black;
+  border-color: black;
+  background: white;
+}

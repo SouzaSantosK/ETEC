@@ -1,0 +1,15 @@
+.question-container .option:first-child {
+  background-image: url(images/shield.webp);
+}
+
+.question-container .option:nth-child(2) {
+  background-image: url(images/axe.webp);
+}
+
+.question-container .option:nth-child(3) {
+  background-image: url(images/sword.webp);
+}
+
+.question-container .option:last-child {
+  background-image: url(images/trident.webp);
+}

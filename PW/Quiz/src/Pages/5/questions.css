@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #161616;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10rem;
+  position: relative;
+}
+
+body::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background-image: url("../../../images/minecraft3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(40%) blur(1px);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 40vw;
+}
+
+p {
+  line-height: 35px;
+}
+
+.phrase {
+  margin: 5rem 0;
+  font-size: 35px;
+  line-height: 50px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  position: relative;
+  width: fit-content;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background: yellow;
+  bottom: -5px;
+  left: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+
+h1:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+h1:hover {
+  color: yellow;
+  letter-spacing: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+.alternatives {
+  display: flex;
+  gap: 10px;
+}
+
+label {
+  width: 50%;
+  padding: 1rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid yellow;
+  border-radius: 5px 5px 0 0;
+}
+
+label:first-of-type:hover {
+  background: red;
+  transform: translate(-25px) rotate(-5deg);
+  border-color: red;
+}
+
+label:last-of-type:hover {
+  background: green;
+  border-color: green;
+  transform: translate(25px) rotate(5deg);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  border-bottom: 5px solid yellow;
+}
+
+/* 
+
+.alternatives {
+  display: flex;
+  background: red;
+  gap: 10px;
+}
+
+label {
+  width: 50%;
+  padding: 1rem 3rem;
+  background: #101010;
+  border-radius: 5px;
+} */
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.buttons button,
+.buttons a {
+  all: unset;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+  background: #101010;
+  display: flex;
+  transition: 0.5s ease;
+  opacity: 0.8;
+}
+
+.buttons button:hover,
+.buttons a:hover {
+  opacity: 1;
+}

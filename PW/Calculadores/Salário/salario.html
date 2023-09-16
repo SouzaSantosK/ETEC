@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../form.css">
+    <title>Calculador Salário</title>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">Home 🏡</a>
+        <a href="../Idade/idade.html">Verifica Idade 🧒</a>
+        <a href="../Notas/notas.html">Gerador de Notas 👩‍🎓</a>
+        <a href="../Salário/salario.html">Calculador Salário 💸</a>
+    </nav>
+    <div class="title">
+        <h1>Calculador Salário 💸</h1>
+    </div>
+    <div class="container">
+        <form action="salario.php" method="post">
+            <div>
+                <input required placeholder="Valor p/hora" type="number" min="20" value="20" name="valorHora">
+
+                <input required placeholder="Horas trabalhadas" type="number" name="qtdhoras">
+            </div>
+
+            <button>Calcular</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap");
+
+.progress-bar {
+  width: 50%;
+}
+
+body {
+  min-height: 100vh;
+  background: #161616;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8rem;
+  position: relative;
+}
+
+body::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background-image: url(./images/minecraft16.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(35%) blur(1px);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 40vw;
+}
+
+p {
+  line-height: 35px;
+}
+
+.phrase {
+  margin: 5rem 0;
+  font-size: 35px;
+  line-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.phrase span {
+  font-size: 100px;
+  color: yellow;
+  font-family: "Lily Script One", cursive;
+}
+
+.phrase span:last-child {
+  margin-top: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+.alternatives {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  all: unset;
+  width: 50%;
+  border-bottom: 1px solid yellow;
+  border-radius: 5px 5px 0 0;
+  transition: 0.3s ease;
+}
+
+button:first-of-type:hover {
+  background: red;
+  transform: translate(-25px) rotate(-5deg);
+  border-color: red;
+}
+
+button:last-of-type:hover {
+  background: green;
+  border-color: green;
+  transform: translate(25px) rotate(5deg);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0;
+  cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.question-container .option:first-child {
+  background-image: url(images/pressure_plate.webp);
+}
+
+.question-container .option:nth-child(2) {
+  background-image: url(images/stone.webp);
+}
+
+.question-container .option:nth-child(3) {
+  background-image: url(images/lever.webp);
+}
+
+.question-container .option:last-child {
+  background-image: url(images/chest.webp);
+}

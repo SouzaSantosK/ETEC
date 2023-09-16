@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Formulário em PHP</title>
+  </head>
+  <body>
+    <main>
+      <form action="./script.php" method="post">
+        <section class="top">
+          <h1>Seja bem vindo!</h1>
+          <p class="description">
+            Para uma melhor experiência, precisamos que você nos responda
+            algumas perguntas...
+          </p>
+        </section>
+
+        <section>
+          <h2>Informações básicas:</h2>
+          <div class="user-basics">
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              class="input-style"
+              placeholder="Digite seu nome"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="input-style"
+              placeholder="Digite seu email"
+              required
+            />
+          </div>
+        </section>
+
+        <section class="os">
+          <h2>Sistema Operacional:</h2>
+          <ul>
+            <li>
+              <label for="win10">Windows 10</label>
+              <input
+                type="radio"
+                name="sistema"
+                id="win10"
+                value="Windows 10"
+              />
+            </li>
+            <li>
+              <label for="winXP">Windows XP</label>
+              <input
+                type="radio"
+                name="sistema"
+                id="winXP"
+                value="Windows XP"
+              />
+            </li>
+            <li>
+              <label for="linux">Linux</label>
+              <input type="radio" name="sistema" id="linux" value="Linux" />
+            </li>
+            <li>
+              <label for="macOS">Mac OS</label>
+              <input type="radio" name="sistema" id="macOS" value="Mac OS" />
+            </li>
+          </ul>
+        </section>
+
+        <section class="monitor">
+          <h2>Monitor:</h2>
+          <ul>
+            <li>
+              <label for="samsung">Samsung</label>
+              <input type="radio" name="monitor" id="samsung" value="Samsung" />
+            </li>
+            <li>
+              <label for="LG">LG</label>
+              <input type="radio" name="monitor" id="LG" value="LG" />
+            </li>
+            <li>
+              <label for="outro">Outro</label>
+              <input type="radio" name="monitor" id="outro" value="Outro" />
+            </li>
+          </ul>
+        </section>
+
+        <section class="processador">
+          <div>
+            <h2>Processador:</h2>
+            <select name="processador[]" class="input-style" required>
+              <option value="">Selecione uma opção</option>
+              <option value="Intel Pentium 4">Intel Pentium 4</option>
+              <option value="Intel Core 2 Duo">Intel Core 2 Duo</option>
+              <option value="AMD Athlon 64">AMD Athlon 64</option>
+              <option value="Intel Core i3-530">Intel Core i3-530</option>
+              <option value="AMD Sempron">AMD Sempron</option>
+            </select>
+          </div>
+          <div>
+            <h2>Placa de Vídeo:</h2>
+            <select name="placa[]" class="input-style" required>
+              <option value="">Selecione uma opção</option>
+              <option value="GT 960">GT 960</option>
+              <option value="GTX 1080">GTX 1080</option>
+              <option value="Radeon 5500X">Radeon 5500X</option>
+              <option value="NVIDIA GeForce RTX 3080">
+                NVIDIA GeForce RTX 3080
+              </option>
+              <option value="AMD Radeon RX 560">AMD Radeon RX 560</option>
+              <option value="AMD Radeon RX Vega 64">
+                AMD Radeon RX Vega 64
+              </option>
+            </select>
+          </div>
+        </section>
+
+        <section class="especs">
+          <h2>Armazenamento:</h2>
+          <div>
+            <input type="checkbox" name="interno[]" id="HD" value="HD" />
+            <label for="HD">HDD</label>
+          </div>
+
+          <div>
+            <input type="checkbox" name="interno[]" id="SSD" value="SSD" />
+            <label for="SSD">SSD</label>
+          </div>
+
+          <div>
+            <input type="checkbox" name="interno[]" id="NVMe" value="NVMe" />
+            <label for="NVMe">SSD NVMe</label>
+          </div>
+
+          <div>
+            <input type="checkbox" name="interno[]" id="PCIe" value="PCIe" />
+            <label for="PCIe">SSD PCIe</label>
+          </div>
+        </section>
+
+        <!-- <textarea name="mensagem" cols="30" rows="10"></textarea> -->
+
+        <section>
+          <label for="newsletter">Receber Newsletter?</label>
+          <input type="checkbox" name="news" value="1" id="newsletter" />
+        </section>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+  </body>
+</html>

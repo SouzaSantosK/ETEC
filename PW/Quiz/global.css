@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  background: #161616;
+  color: white;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: 35vw 65vw;
+}
+
+p {
+  line-height: 35px;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  position: relative;
+  width: fit-content;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background: yellow;
+  bottom: -5px;
+  left: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+
+h1:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+h1:hover {
+  color: yellow;
+  letter-spacing: 2px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.buttons button {
+  all: unset;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #101010;
+  transition: 0.5s ease;
+  padding: 1rem;
+  pointer-events: all;
+}
+
+.buttons button:not(.disabled) {
+  animation: trim 0.5s ease;
+  opacity: 1;
+}
+
+.buttons button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@keyframes trim {
+  0%,
+  100% {
+    transform: 0;
+    background: #101010;
+  }
+
+  25% {
+    transform: rotate(5deg);
+    background: green;
+  }
+
+  50% {
+    transform: rotate(-5deg);
+    background: green;
+  }
+
+  75% {
+    transform: rotate(5deg);
+    background: green;
+  }
+}
+
+.buttons button:hover {
+  opacity: 1;
+  background: rgb(3, 147, 196);
+}

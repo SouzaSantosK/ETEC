@@ -1,0 +1,17 @@
+.question-container {
+  display: flex;
+  height: 400px;
+  margin: 0 1.5rem;
+  padding: 1rem;
+  border-radius: inherit;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.5s;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+
+.question-container:hover {
+  border-color: rgb(2, 161, 217, 0.5);
+}

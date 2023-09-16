@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #161616;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 15vh;
+}
+
+h1 {
+  font-size: 50px;
+  position: relative;
+  width: fit-content;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background: yellow;
+  bottom: -5px;
+  left: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+
+h1:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+h1:hover {
+  color: yellow;
+  letter-spacing: 2px;
+}
+
+form {
+  width: 100%;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "lb-1 lb-1 lb-5 lb-5 lb-6 lb-2"
+    "lb-3 lb-4 lb-5 lb-5 lb-6 lb-7"
+    "lb-3 lb-8 lb-9 lb-10 lb-10 lb-10";
+  gap: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  border-color: lightblue;
+  border-radius: 5px;
+}
+
+.lb {
+  border: 3px solid transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.lb:hover {
+  border-radius: 10px;
+  border-color: lightblue;
+  transform: translateY(-5px);
+  filter: blur(1px) brightness(50%);
+}
+
+.lb-1 {
+  grid-area: lb-1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+.lb-2 {
+  grid-area: lb-2;
+  background-image: url(../../../images/minecraft2.jpg);
+}
+.lb-3 {
+  grid-area: lb-3;
+  background-image: url(../../../images/minecraft3.jpg);
+}
+.lb-4 {
+  grid-area: lb-4;
+  background-image: url(../../../images/minecraft4.jpg);
+}
+.lb-5 {
+  grid-area: lb-5;
+  background-image: url(../../../images/minecraft5.jpg);
+}
+.lb-6 {
+  grid-area: lb-6;
+  background-image: url(../../../images/minecraft6.webp);
+}
+.lb-7 {
+  grid-area: lb-7;
+  background-image: url(../../../images/minecraft7.jpg);
+}
+.lb-8 {
+  grid-area: lb-8;
+  background-image: url(../../../images/minecraft8.jpg);
+}
+.lb-9 {
+  grid-area: lb-9;
+  background-image: url(../../../images/minecraft9.jpg);
+}
+.lb-10 {
+  grid-area: lb-10;
+  background-image: url(../../../images/minecraft10.jpg);
+}
+.lb-11 {
+  grid-area: lb-11;
+}
+.lb-12 {
+  grid-area: lb-12;
+}
+.lb-13 {
+  grid-area: lb-13;
+}
+.lb-14 {
+  grid-area: lb-14;
+}
+
+p {
+  line-height: 35px;
+  font-size: 16px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.buttons button,
+.buttons a {
+  all: unset;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+  background: #101010;
+  display: flex;
+  transition: 0.5s ease;
+  opacity: 0.5;
+}
+
+.buttons button:hover,
+.buttons a:hover {
+  opacity: 1;
+}
