@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  background: #161616;
+  color: white;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: 70vw 30vw;
+}
+
+p {
+  line-height: 35px;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  position: relative;
+  width: fit-content;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background: yellow;
+  bottom: -5px;
+  left: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+
+h1:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+h1:hover {
+  color: yellow;
+  letter-spacing: 2px;
+}
+
+main {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.message {
+  font-size: 60px;
+  color: yellow;
+  text-align: center;
+}
+
+.message:hover {
+  letter-spacing: 2px;
+}
+
+.acertos-erros {
+  text-align: center;
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 25px;
+  text-align: center;
+  animation: jump 3s ease-in-out infinite;
+}
+
+a {
+  margin-top: 15px;
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  background-color: #212121;
+  border: 0.08em solid #fff;
+  border-radius: 0.3em;
+  font-size: 12px;
+  cursor: pointer;
+  align-self: center;
+  scale: 1.2;
+  text-decoration: none;
+}
+
+a span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: #212121;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+}
+
+a span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+a span:not(hover) {
+  transition: all 1s;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.character-icon {
+  width: 100px;
+  height: 100px;
+}
+
+aside {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.celula {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  border: 2px solid rgba(0, 128, 0, 0.4);
+  border-radius: 5px;
+  position: relative;
+}
+
+.celula::after {
+  content: "0";
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  opacity: 0;
+}
+
+.celula:hover {
+  transform: translateX(-10px);
+  border-color: green;
+  background: black;
+}
+
+.celula:hover::after {
+  opacity: 1;
+  transform: translateX(-35px);
+}
+
+.celula img {
+  width: 80px;
+}
