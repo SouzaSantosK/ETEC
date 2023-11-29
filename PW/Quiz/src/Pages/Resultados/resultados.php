@@ -63,7 +63,7 @@
       </header>
       <div class="table">
         <?php 
-          include('../Pages/config/conexao.php');
+          include('../../config/conexao.php');
 
           $stmt = $pdo->prepare("SELECT * FROM tbUser ORDER BY points DESC");
           $stmt->execute();

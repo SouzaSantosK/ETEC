@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+*::before,
+*::after {
+  z-index: -1;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.4s ease;
+}
+
+body {
+  background-color: #1a202b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 50vh;
+  background: #1e243c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+body::after {
+  content: "";
+  width: 100%;
+  height: 40vh;
+  background: #3c66b1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  background: #fafafa;
+  height: 75vh;
+  min-width: 1000px;
+  border-radius: 5px;
+  padding: 40px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+}
+section a {
+  text-decoration: none;
+  color: white;
+}
+section .close {
+  z-index: 2;
+  all: unset;
+  position: absolute;
+  border-radius: 50%;
+  top: 40px;
+  right: -25px;
+  color: #fafafa;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(222, 114, 115);
+  background: linear-gradient(180deg, rgb(222, 114, 115) 0%, rgb(178, 43, 43) 100%);
+  overflow: hidden;
+}
+section .close span {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .close span:hover {
+  transform: rotate(180deg);
+}
+section aside {
+  border: 5px solid #3c66b1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: inherit;
+  background-image: url(../images/minimalist.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.4s ease;
+  filter: brightness(80%);
+}
+section aside:hover {
+  filter: unset;
+}
+section .left-side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+section .left-side h2 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section .left-side h2::after {
+  content: "";
+  width: 0%;
+  height: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: #3c66b1;
+  z-index: 2;
+}
+section .left-side h2:hover {
+  letter-spacing: 3px;
+}
+section .left-side h2:hover::after {
+  width: 100%;
+}
+section .left-side form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+section .left-side form .input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  gap: 10px;
+}
+section .left-side form .input-group.focused {
+  border-color: black;
+}
+section .left-side form .input-group.valid {
+  border-color: rgb(27, 179, 27);
+}
+section .left-side form .input-group label {
+  display: flex;
+  right: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: right;
+}
+section .left-side form .input-group label.username {
+  white-space: nowrap;
+}
+section .left-side form input:not([type=checkbox]),
+section .left-side form #county {
+  all: unset;
+  padding: 15px 0;
+  width: 100%;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.4);
+  transition: color 0.4s ease;
+}
+section .left-side form input:not([type=checkbox]):focus,
+section .left-side form #county:focus {
+  color: black;
+}
+section .left-side form input:not([type=checkbox]):focus ~ label,
+section .left-side form #county:focus ~ label {
+  color: black;
+  transform: translateY(-5px);
+}
+section .left-side form input:not([type=checkbox]):valid,
+section .left-side form #county:valid {
+  color: rgb(27, 179, 27);
+}
+section .left-side form input:not([type=checkbox]):valid ~ label,
+section .left-side form #county:valid ~ label {
+  color: rgb(27, 179, 27);
+  transform: translateY(-5px);
+}
+section .left-side form .terms {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+section .left-side form .terms p {
+  line-height: 20px;
+  font-size: 14px;
+}
+section .left-side form .terms span {
+  font-weight: bold;
+}
+section .left-side form .terms input {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+section .left-side form .divisor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+section .left-side form .submit {
+  padding: 15px 0;
+  background: #3a66b2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-align: center;
+  color: #fafafa;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: 0.2s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+section .left-side form .submit:hover {
+  background: transparent;
+  border-color: #3a66b2;
+  color: #3a66b2;
+}

@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+*::before,
+*::after {
+  z-index: -1;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+body {
+  background: linear-gradient(90deg, #151515, #000000);
+  min-height: 100vh;
+  font-size: 16px;
+  color: white;
+}
+
+nav {
+  background: #181818;
+  height: 60px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+nav .user,
+nav .info {
+  min-width: 160px;
+}
+nav .info {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+nav .user {
+  display: flex;
+  gap: 10px;
+}
+nav .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+nav .user .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+nav .user .name h4 {
+  font-size: 26px;
+  text-transform: capitalize;
+}
+nav .user .name p {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.6);
+}
+nav h3 {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+main {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main h1 {
+  font-size: 40px;
+  line-height: 10px;
+}
+main h3 {
+  font-size: 35px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+main .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main .container .card {
+  background: transparent;
+  border-radius: 5px;
+  padding: 20px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+main .container .card:nth-of-type(1) {
+  background-image: url(../images/php.png);
+}
+main .container .card:nth-of-type(2) {
+  background-image: url(../images/java.webp);
+}
+main .container .card:nth-of-type(3) {
+  background-image: url(../images/js.jpeg);
+}
+main .container .card:nth-of-type(4) {
+  background-image: url(../images/html-css.webp);
+}
+main .container .card:nth-of-type(5) {
+  background-image: url(../images/sql.webp);
+}
+main .container .card:nth-of-type(6) {
+  background-image: url(../images/python.png);
+}
+main .container .card::before {
+  transition: 0.4s ease;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+main .container .card:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+main .container .card:hover .content {
+  transition: 0.4s ease;
+  transform: unset;
+}
+main .container .card .content {
+  width: 100%;
+  transform: translateX(-200%);
+  z-index: 1;
+}
+main .container .card .content h2 {
+  font-size: 100px;
+}
+main .container .card .content p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 20px 60px;
+  justify-content: center;
+  font-size: 20px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:not(.back) {
+  font-weight: bold;
+}
+footer a:not(.back):hover {
+  color: #3c66b1;
+}
+footer .back {
+  position: absolute;
+  right: 60px;
+  top: 0;
+  padding: 10px 25px;
+  background: #151515;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+footer .back:hover {
+  background: unset;
+  border-color: #151515;
+}

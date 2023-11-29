@@ -18,7 +18,7 @@
       </header>
 
       <section>
-        <form method="post" action="../um.php">
+        <form method="post" action="src/Pages/um.php">
           <div>
             <label for="name" id="name-label">
               Antes de começarmos, digite seu nome
